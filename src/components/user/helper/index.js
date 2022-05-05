@@ -1,5 +1,6 @@
+import { API } from "../../../backend";
 export const getuser = (userId, token) => {
-  return fetch(`/user/${userId}`, {
+  return fetch(`${API}/user/${userId}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -14,7 +15,7 @@ export const getuser = (userId, token) => {
 };
 
 export const createpost = (userId, token, data) => {
-  return fetch(`/post/${userId}`, {
+  return fetch(`${API}/post/${userId}`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -31,7 +32,7 @@ export const createpost = (userId, token, data) => {
 };
 
 export const updatepost = (userId, postId, token, data) => {
-  return fetch(`/post/update/${userId}/${postId}`, {
+  return fetch(`${API}/post/update/${userId}/${postId}`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -48,7 +49,7 @@ export const updatepost = (userId, postId, token, data) => {
 };
 
 export const getpost = (postId) => {
-  return fetch(`/post/${postId}`, {
+  return fetch(`${API}/post/${postId}`, {
     method: "GET",
   })
     .then((response) => {
@@ -60,7 +61,7 @@ export const getpost = (postId) => {
 };
 
 export const deletepost = (userId, postId, token) => {
-  return fetch(`/post/delete/${userId}/${postId}`, {
+  return fetch(`${API}/post/delete/${userId}/${postId}`, {
     method: "DELETE",
     headers: {
       Accept: "application/json",

@@ -1,5 +1,6 @@
+import { API } from "../../../backend";
 export const getposts = (limit) => {
-  return fetch(`/posts?limit=${limit}`, {
+  return fetch(`${API}/posts?limit=${limit}`, {
     method: "GET",
   })
     .then((response) => {
@@ -10,7 +11,7 @@ export const getposts = (limit) => {
     });
 };
 export const getpost = (postId) => {
-  return fetch(`/post/${postId}`, {
+  return fetch(`${API}/post/${postId}`, {
     method: "GET",
   })
     .then((response) => {

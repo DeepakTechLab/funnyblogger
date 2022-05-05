@@ -1,9 +1,10 @@
 import { CardMedia } from "@mui/material";
 import React from "react";
+import { API } from "../../../backend";
 
 export const ImageHelper = ({ post }) => {
   let imageUrl = post.image
-    ? `/posts/image/${post._id}`
+    ? `${API}/posts/image/${post._id}`
     : "https://us.123rf.com/450wm/mathier/mathier1905/mathier190500001/134557215-no-thumbnail-images-placeholder-for-forums-blogs-and-websites.jpg?ver=6";
   return (
     <CardMedia
@@ -17,7 +18,7 @@ export const ImageHelper = ({ post }) => {
 };
 export const SingleImageHelper = ({ post }) => {
   let imageUrl = post.image
-    ? `/posts/image/${post._id}`
+    ? `${API}/posts/image/${post._id}`
     : "https://us.123rf.com/450wm/mathier/mathier1905/mathier190500001/134557215-no-thumbnail-images-placeholder-for-forums-blogs-and-websites.jpg?ver=6";
   return (
     <CardMedia
