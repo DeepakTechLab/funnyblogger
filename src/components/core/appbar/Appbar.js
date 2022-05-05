@@ -20,7 +20,7 @@ export default function Appbar() {
             sx={{ color: "#000", cursor: "pointer" }}
           >
             <NavLink to={"/"} className={"navLink"}>
-              Blogger two
+              Blogger
             </NavLink>
           </Typography>
           <div
