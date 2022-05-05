@@ -63,7 +63,7 @@ const Home = () => {
     >
       <Base
         className={{
-          marginTop: matches ? "70px" : "65px",
+          marginTop: matches ? "56px" : "65px",
           marginBottom: "50px",
         }}
       >
